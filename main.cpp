@@ -99,9 +99,9 @@ int main(int argc, char *argv[])
 
 		sample_uniform_sphere(uniform(gen), uniform(gen), rayhit.ray.dir_x, rayhit.ray.dir_y, rayhit.ray.dir_z);
 		sample_uniform_sphere_vol(uniform(gen), uniform(gen), uniform(gen), rayhit.ray.org_x, rayhit.ray.org_y, rayhit.ray.org_z);
-		rayhit.ray.org_x -= rayhit.ray.dir_x;
-		rayhit.ray.org_y -= rayhit.ray.dir_y;
-		rayhit.ray.org_z -= rayhit.ray.dir_z;
+		rayhit.ray.org_x -= 2.0f * rayhit.ray.dir_x;
+		rayhit.ray.org_y -= 2.0f * rayhit.ray.dir_y;
+		rayhit.ray.org_z -= 2.0f * rayhit.ray.dir_z;
 
 		rayhit.ray.tnear = 0.0f;
 		rayhit.ray.time = 0.0f;
