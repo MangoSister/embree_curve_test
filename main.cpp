@@ -114,10 +114,7 @@ int main(int argc, char *argv[])
 		rayhit.hit.primID = RTC_INVALID_GEOMETRY_ID;
 		rtcIntersect1(rtcscene, &ctx, &rayhit);
 		if (rayhit.hit.geomID != RTC_INVALID_GEOMETRY_ID) {
-			//preview[y * image_width + x] = color3::Zero();
 			float P[4];
-			// embree does not calculate v or interpolate dpdv for linear curve...
-			// also interpolate radius...
 			rtcInterpolate1(rtcGetGeometry(rtcscene, rayhit.hit.geomID), rayhit.hit.primID, rayhit.hit.u, rayhit.hit.v,
 				RTC_BUFFER_TYPE_VERTEX, 0, P, nullptr, nullptr, 4);
 

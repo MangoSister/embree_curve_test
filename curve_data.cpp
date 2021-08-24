@@ -1,6 +1,6 @@
 #include "curve_data.h"
 
-const float vertex_buffer[2000 * 4] = {
+const float vertex_buffer[num_vertices * 4] = {
 -0.246331, -0.955640, 0.161473, 0.003750,
 -0.845277, 0.196352, -0.496944, 0.003750,
 -0.392323, -0.867860, -0.304797, 0.003750,
